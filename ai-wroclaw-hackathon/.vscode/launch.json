@@ -15,7 +15,7 @@
       "skipFiles": ["<node_internals>/**"],
       "sourceMaps": true,
       "outFiles": [
-        "${workspaceFolder}/fleet-api/dist/**/*.(m|c|)js",
+        "${workspaceFolder}/dist/fleet-api/**/*.(m|c|)js",
         "!**/node_modules/**"
       ]
     }
