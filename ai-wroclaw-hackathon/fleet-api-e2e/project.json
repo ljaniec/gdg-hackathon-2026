@@ -1,0 +1,17 @@
+{
+  "name": "fleet-api-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "implicitDependencies": ["fleet-api"],
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
+      "options": {
+        "jestConfig": "fleet-api-e2e/jest.config.cts",
+        "passWithNoTests": true
+      },
+      "dependsOn": ["fleet-api:build", "fleet-api:serve"]
+    }
+  }
+}
