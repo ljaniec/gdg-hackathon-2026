@@ -1,6 +1,6 @@
 export default {
   displayName: 'fleet-api-e2e',
-  preset: '../jest.preset.js',
+  preset: '@nx/jest/preset',
   globalSetup: '<rootDir>/src/support/global-setup.ts',
   globalTeardown: '<rootDir>/src/support/global-teardown.ts',
   setupFiles: ['<rootDir>/src/support/test-setup.ts'],
