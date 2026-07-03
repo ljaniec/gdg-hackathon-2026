@@ -40,12 +40,12 @@ flowchart LR
     UI[fleet-ui<br/>Angular + ng-diagram]
     API[fleet-api<br/>NestJS + Sequelize]
     DB[(fleet-postgres<br/>PostgreSQL 16)]
-    CI[Copilot Instructions<br/>.github/copilot-instructions.md]
+    CopilotCtx[Copilot Instructions<br/>.github/copilot-instructions.md]
 
     Dev --> UI
     UI --> API
     API --> DB
-    Dev --> CI
+    Dev --> CopilotCtx
 ```
 
 ## Run tasks
