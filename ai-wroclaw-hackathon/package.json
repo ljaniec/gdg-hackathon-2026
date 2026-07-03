@@ -2,7 +2,12 @@
   "name": "@ai-wroclaw-hackathon/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "setup": "npm install",
+    "setup:dev": "npm run setup && docker compose pull fleet-postgres",
+    "db:up": "docker compose up -d fleet-postgres",
+    "db:down": "docker compose down"
+  },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "~21.2.0",

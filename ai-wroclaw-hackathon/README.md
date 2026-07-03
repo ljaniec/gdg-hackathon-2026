@@ -6,6 +6,48 @@
 
 [Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
+## Developer setup
+
+Install all required dependencies:
+
+```sh
+npm run setup
+```
+
+Install dependencies and pre-pull local PostgreSQL runtime image:
+
+```sh
+npm run setup:dev
+```
+
+Run local PostgreSQL container:
+
+```sh
+npm run db:up
+```
+
+Stop local PostgreSQL container:
+
+```sh
+npm run db:down
+```
+
+## Architecture diagram
+
+```mermaid
+flowchart LR
+    Dev[Developer]
+    UI[fleet-ui<br/>Angular + ng-diagram]
+    API[fleet-api<br/>NestJS + Sequelize]
+    DB[(fleet-postgres<br/>PostgreSQL 16)]
+    CI[Copilot Instructions<br/>.github/copilot-instructions.md]
+
+    Dev --> UI
+    UI --> API
+    API --> DB
+    Dev --> CI
+```
+
 ## Run tasks
 
 To run the dev server for your app, use:
