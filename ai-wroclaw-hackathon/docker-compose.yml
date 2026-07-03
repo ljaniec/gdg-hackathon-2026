@@ -1,0 +1,16 @@
+services:
+  fleet-postgres:
+    image: postgres:16
+    container_name: fleet-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-fleet}
+      POSTGRES_USER: ${POSTGRES_USER:-fleet}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-fleet}
+    ports:
+      - '5432:5432'
+    volumes:
+      - fleet-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  fleet-postgres-data:
